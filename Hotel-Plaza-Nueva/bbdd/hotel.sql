@@ -1,3 +1,12 @@
+/*
+<!--
+Authors: Balti and Borja
+Database DUMP include rooms and activities, use with CAUTION
+-->
+*/
+
+
+
 -- phpMyAdmin SQL Dump
 -- version 4.5.1
 -- http://www.phpmyadmin.net

@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Asignatura : Desarrollo Basado en Agentes
+ * Algoritmo A estrella aplicado a un mapa
+ * NxN
+ *
  */
 package pruebas;
 
@@ -26,7 +27,6 @@ public class Pruebas {
     public static ArrayList<celda> usados;
     private static ArrayList<celda> expandirNodos( celda poll,int [][] mapa) {
         // Añadiremos todos los nodos visitables a la cola
-        // AQUI
         int finalx = 5;
         int finaly = 7;
         ArrayList<celda> devolver = new ArrayList<>();
@@ -43,13 +43,13 @@ public class Pruebas {
            if(mapa[poll.x][poll.y-1] == 3)
                soluciones.add(nueva);
            else
-            devolver.add(nueva);        }        
+            devolver.add(nueva);        }
         if(mapa[poll.x+1][poll.y-1] != 0 && mapa[poll.x+1][poll.y-1] != 2 && mapa[poll.x+1][poll.y-1] != 9 ){
            nueva = new celda(poll.x+1,poll.y-1,mapa[poll.x+1][poll.y-1],finalx,finaly,poll.x,poll.y);
            if(mapa[poll.x+1][poll.y-1] == 3)
                soluciones.add(nueva);
            else
-            devolver.add(nueva);        }        
+            devolver.add(nueva);        }
         if(mapa[poll.x-1][poll.y] != 0 && mapa[poll.x-1][poll.y] != 2 && mapa[poll.x-1][poll.y] != 9 ){
            nueva = new celda(poll.x-1,poll.y,mapa[poll.x-1][poll.y],finalx,finaly,poll.x,poll.y);
            if(mapa[poll.x-1][poll.y] == 3)
@@ -61,7 +61,7 @@ public class Pruebas {
            if(mapa[poll.x+1][poll.y] == 3)
                soluciones.add(nueva);
            else
-            devolver.add(nueva);        }            
+            devolver.add(nueva);        }
         if(mapa[poll.x-1][poll.y+1] != 0 && mapa[poll.x-1][poll.y+1] != 2 && mapa[poll.x-1][poll.y+1] != 9 ){
            nueva = new celda(poll.x-1,poll.y+1,mapa[poll.x-1][poll.y+1],finalx,finaly,poll.x,poll.y);
            if(mapa[poll.x-1][poll.y+1] == 3)
@@ -82,7 +82,7 @@ public class Pruebas {
             devolver.add(nueva);        }
         return devolver;
     }
-    // AQUI
+
     private static double calcularCoste(celda get) {
         double devolver=0.0;
         Iterator <celda> itusados = usados.iterator();
@@ -97,24 +97,21 @@ public class Pruebas {
         return devolver;
     }
 
-    /**
-     * @param args the command line arguments
-     */
     	static class criterioCola implements Comparator<celda> {
-                
+
                 //  Negativo si el primero es menos prioritario
                 // Zero si son iguales
                 // Positivo si el primero es mas prioritario
                 // a es 5 y b es 3 , el mas prioritario es 3
-		public int compare(celda one, celda two) {                        
+		public int compare(celda one, celda two) {
 			return (int) (two.dEuclidea - one.dEuclidea);
 		}
 	}
-    
+
     void calcularSiguientePaso(){
-        
+
     }
-    
+
     public static void main(String[] args) throws FileNotFoundException, IOException {
       soluciones = new ArrayList();
       boolean encontrado = true;
@@ -140,9 +137,9 @@ public class Pruebas {
            while(j < cadena.length() && cadena.charAt(j) != '9' ){
             System.out.println("la cadena esta en "+j);
             if(cadena.charAt(j) != ' '){
-                int x = Character.getNumericValue(cadena.charAt(j));             
+                int x = Character.getNumericValue(cadena.charAt(j));
                 mapa[i][j] = x;
-             
+
             }
                j++;
            }
@@ -163,14 +160,14 @@ public class Pruebas {
                 }
              i++;
           }
-          
-          
+
+
           System.out.println(cadena);
       }
-           
-           
-      
-           
+
+
+
+
       if(encontrado){
           System.out.println("El mapa se ha encontrado, aqui esta el resultado");
            for ( i = 0; i < 100; i++){
@@ -196,7 +193,7 @@ public class Pruebas {
         e.printStackTrace();
     } finally {
        try {
-       // Nuevamente aprovechamos el finally para 
+       // Nuevamente aprovechamos el finally para
        // asegurarnos que se cierra el fichero.
        if (null != fichero)
           fichero.close();
@@ -209,7 +206,7 @@ public class Pruebas {
       // AQUI
     // Vamos a empezar en (1,1) , la solucion esta en (7,5)EN ESTE CASO CONCRETO
     celda inicial = new celda(1,1,1,7,5,0,0);
-    //PriorityQueue(int initialCapacity, Comparator<? super E> comparator)   
+    //PriorityQueue(int initialCapacity, Comparator<? super E> comparator)
     criterioCola criterio = new criterioCola();
     PriorityQueue<celda> colavivos = new PriorityQueue<celda>(10,criterio);
     usados = new ArrayList();
@@ -220,7 +217,7 @@ public class Pruebas {
        celda actual = colavivos.poll(); // Sacamos el mejor nodo
        ArrayList<celda> nodos =  expandirNodos(actual,mapa); // Expandimos el mejor nodo
        usados.add(actual); // Añadimos a usados el nodo que habiamos usado antes
-       
+
        // No los añadimos si estan en la cola de vivos o en la de usados
        Iterator <celda> itusados = usados.iterator();
        Iterator <celda> itcolavivos = colavivos.iterator();
@@ -243,14 +240,14 @@ public class Pruebas {
        for(int k=0;k<nodos.size();k++){
            colavivos.offer(nodos.get(k));
        }
-       
+
     }
     Iterator <celda> itusados = usados.iterator();
     while(itusados.hasNext()){
         celda c = itusados.next();
         System.out.println("Nodo "+c.y +" "+c.x+ " padre: "+c.yanterior+" "+c.xanterior+ " valor casilla: "+c.valor);
     }
-    
+
     double mejor = 100000;
     int nodoelegido = 0;
     for(int k=0;k<soluciones.size();k++){
@@ -259,7 +256,7 @@ public class Pruebas {
             nodoelegido = k;
     }
     celda mejorc = soluciones.get(nodoelegido);
-    
+
     System.out.println("El mejor camino es :");
     while(mejorc.xanterior != 0 && mejorc.yanterior != 0 ){
         System.out.println(mejorc.y + " " + mejorc.x);

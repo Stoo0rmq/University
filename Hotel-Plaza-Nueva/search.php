@@ -1,3 +1,12 @@
+<!--
+Authors: Balti and Borja
+Search function, if you're defined
+as hotel owner or staff, you can
+check books using the finder
+-->
+
+
+
 <?php
 $con = mysql_connect("localhost", "root", "") or exit("No se pudo conectar con el servidor") ;
 $abreBD = mysql_select_db("hotel", $con) ;

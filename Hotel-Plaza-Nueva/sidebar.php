@@ -1,3 +1,10 @@
+<!--
+Authors: Balti and Borja
+Sidebar, includes promotions and interesting links
+-->
+
+
+
 <div id="content">
     <div id="secondarycontent">
         <h4>Nuestras promociones:</h4>
@@ -12,7 +19,7 @@
 
     <br>
     <h4>Menú de navegación:<br></h4><br>
-    <?php 
+    <?php
         $seleccion = "SELECT * FROM menudinamico WHERE padre = 'Principal' ORDER BY orden ASC" ;
         $resultado = mysql_query($seleccion) ;
         $numfilas = mysql_num_rows($resultado) ;

@@ -1,3 +1,10 @@
+<!--
+Authors: Balti and Borja
+Main, does not contain any details in order to keep
+integrity of main function
+-->
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -23,7 +30,7 @@
 
 				session_start() ;
 				require_once './conexion.php' ;
-				
+
 				require './verificar_login.php' ;
 				require './factura.php' ;
 

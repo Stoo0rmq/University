@@ -29,7 +29,7 @@ public class Control extends JFrame {
     // Atributos de la ventana
     setTitle ("Control Window");
     setLocation (820, 100);
-    
+
     addWindowListener(new WindowAdapter() {
       @Override
       public void windowClosing(WindowEvent e) {

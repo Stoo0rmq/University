@@ -1,3 +1,8 @@
+<!--
+Authors: Balti and Borja
+Header details, it includes a livesearch bar using AJAX
+as well as a register option
+-->
 <div id="header">
     <div id="headercontent">
 <?php
@@ -14,7 +19,7 @@
 
 <script>
         function showResult(str) {
-          
+
           if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp=new XMLHttpRequest();

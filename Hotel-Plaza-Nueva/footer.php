@@ -1,3 +1,10 @@
+<!--
+Authors: Balti and Borja
+Footer details
+
+-->
+
+
 <?php
 	$seleccionhotel = "SELECT * FROM hotel" ;
 	$resultadohotel = mysql_query($seleccionhotel) ;

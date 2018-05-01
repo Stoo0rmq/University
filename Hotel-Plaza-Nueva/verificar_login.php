@@ -1,3 +1,9 @@
+<!--
+Authors: Balti and Borja
+Checks if login is correct
+-->
+
+
 <?php $variablelogin = null ; ?>
 
 <?php
@@ -40,7 +46,7 @@ if(!isset($_SESSION['userid'])){
 ?>
 
 <?php
-} 
+}
 
 else {
     $variablelogin = 'Logueado como '.$_SESSION['userid'].' <input type=button onClick=location.href="logout.php" value="Log Out">' ;

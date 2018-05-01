@@ -1,3 +1,10 @@
+<!--
+Authors: Balti and Borja
+Conection to mysql database on php.
+PS: please take into account that this is not the sql db user and password
+
+-->
+
 <?php
 	$con = mysql_connect("localhost", "root", "") or exit("No se pudo conectar con el servidor") ;
 	$abreBD = mysql_select_db("hotel", $con) ;

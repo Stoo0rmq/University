@@ -1,3 +1,13 @@
+<!--
+Authors: Balti and Borja
+Main functions of the system, including booking system.
+-->
+
+
+
+
+
+
 <?php
     class Habitacion{
         var $nombrehab;

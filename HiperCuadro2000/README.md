@@ -1,6 +1,6 @@
 # HiperCuadro2000
-Segunda práctica para la asignatura Desarrollo de Software.
+Second assignment made during Software Development course (3rd year)
+Car control panel made in Java
+Authors: Alberto Meana y Borja Cañavate
 
-Cuadro de control de un vehículo realizado en Java.
-
-Autores: Alberto Meana y Borja Cañavate
+Diagrams and stuff like this is on /Diagrams folder

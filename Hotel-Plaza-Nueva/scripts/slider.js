@@ -1,9 +1,18 @@
-﻿function rotar(){ 
+/*
+* Made by Balti and Borja
+* Basic slider made in JS
+*
+*
+*/
+
+
+
+function rotar(){
     var position = 0 ;
     var mode = 0 ;
 	var timer = setInterval(sliderScroll, 25) ;   // La función sliderScroll se repetirá indefinidamente cada 50 msegundos
 
-    function sliderScroll(){   
+    function sliderScroll(){
         position = document.getElementById("slider").scrollLeft ;   // Calcula la posición actual del contenedor
 
         if (mode == 0)

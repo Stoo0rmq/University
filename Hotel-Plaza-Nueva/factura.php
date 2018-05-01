@@ -1,3 +1,10 @@
+<!--
+Authors: Balti and Borja
+Bill creation using FPDF
+
+-->
+
+
 <?php
 require('./fpdf/fpdf.php') ;
 
