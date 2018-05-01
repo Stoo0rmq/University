@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f97b03ac872aaab408dc5392ea331be9
+timeCreated: 1463752290
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - CheckpointActual: {instanceID: 0}
+  - Efecto_muerte: {fileID: 141108, guid: 9b3417bb289f2174d8f2a151c016b7d7, type: 2}
+  - Efecto_respawn: {fileID: 166030, guid: 48c127ff7a93c2046b3da581e3e3d3f5, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
