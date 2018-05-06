@@ -3,3 +3,5 @@ Non realistic solar system made using Java3D. There are 3 different cameras. Any
 If you have friends that support Flat Earth theories, why don't you give them a chance with this program? Step by step.
 
 Authors: Baltasar Ruiz y Borja Cañavate
+
+ps: Pluton is a Planet
